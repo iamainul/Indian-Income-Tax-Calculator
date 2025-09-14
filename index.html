@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Indian Income Tax Calculator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="wrapper">
+    <h1>Indian Income Tax Calculator</h1>
+    <p class="subtitle">Financial Year 2024-25 (Assessment Year 2025-26)</p>
+
+    <div class="card">
+      <!-- Tabs -->
+      <div class="tabs">
+        <button class="tab active" onclick="switchTab('calculator')">Calculator</button>
+        <button class="tab" onclick="switchTab('summary')">Tax Summary</button>
+        <button class="tab" onclick="switchTab('history')">History</button>
+      </div>
+
+      <!-- Calculator Tab -->
+      <div id="calculator" class="tab-content active">
+        <div class="form-group">
+          <label for="salary">Annual Salary (₹)</label>
+          <input type="number" id="salary" placeholder="Enter your annual salary">
+          <small>Enter your total annual salary before any deductions</small>
+        </div>
+
+        <div class="form-group">
+          <label>Tax Regime</label>
+          <div class="radio-group">
+            <label><input type="radio" name="regime" value="old" checked> Old Regime (with deductions)</label>
+            <label><input type="radio" name="regime" value="new"> New Regime (lower rates, no deductions)</label>
+          </div>
+        </div>
+
+        <h3>Deductions (Old Regime)</h3>
+        <div class="grid">
+          <div class="form-group">
+            <label for="sec80c">Section 80C (₹)</label>
+            <input type="number" id="sec80c" placeholder="Max ₹1,50,000">
+            <small>PPF, ELSS, LIC, etc.</small>
+          </div>
+          <div class="form-group">
+            <label for="sec80d">Section 80D (₹)</label>
+            <input type="number" id="sec80d" placeholder="Max ₹25,000">
+            <small>Health Insurance Premium</small>
+          </div>
+          <div class="form-group">
+            <label for="hra">HRA Exemption (₹)</label>
+            <input type="number" id="hra" placeholder="Enter HRA exemption">
+            <small>House Rent Allowance exemption</small>
+          </div>
+          <div class="form-group">
+            <label for="other">Other Deductions (₹)</label>
+            <input type="number" id="other" placeholder="Other deductions">
+            <small>Other applicable deductions</small>
+          </div>
+        </div>
+
+        <button class="btn" onclick="calculateTax()">Calculate Tax</button>
+      </div>
+
+      <!-- Tax Summary Tab -->
+      <div id="summary" class="tab-content">
+        <h2>Tax Summary</h2>
+        <div id="summary-content"></div>
+      </div>
+
+      <!-- History Tab -->
+      <div id="history" class="tab-content">
+        <h2>History</h2>
+        <ul id="history-list"></ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer with Credits -->
+  <footer>
+    <p>⚡ Developed by <strong>Ainul Usmani</strong> | Software Engineer </p>
+    <p>© 2025 Indian Income Tax Calculator Project</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
