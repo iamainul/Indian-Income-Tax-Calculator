@@ -23,7 +23,7 @@ Easily calculate your income tax for **FY 2024-25 (AY 2025-26)** under both **Ol
 - 📜 **History Tab** – Save and view past calculations.  
 - 🛡️ **Rebate u/s 87A** and **4% Health & Education Cess** auto-applied.  
 - 🖥️ Runs directly in your browser – No installation required.  
-- 📝 **Created with ❤️ by Ainul Usmani**.  
+- 📝 **Created with ❤️ by Ainul Haq**.  
 
 ---
 
